@@ -1,0 +1,275 @@
+:root {
+  --main-color: #99FFDF;
+  --light-color: #f4f4f4;
+  --dark-color: #444;
+  --darker-color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.btn {
+  font-weight: bold;
+  padding: 20px;
+}
+
+.text-highlight {
+  color: var(--main-color);
+}
+
+.intro-text, .intro-img, .about-text, .about-img, .home-text, .home-img {
+  width: 50%;
+}
+
+/* Navigation */
+nav {
+  background-color: var(--darker-color);
+}
+
+.active {
+  font-weight: bold;
+}
+
+.logo {
+  font-size: 1.5rem;
+  padding: 1.5rem;
+}
+
+nav a {
+  color: var(--light-color);
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li a {
+  padding: 2rem;
+  text-align: center;
+  transition: 0.3s ease-in;
+}
+
+nav ul li a:hover, nav ul li a.active {
+  background-color: var(--dark-color);
+  color: var(--main-color);
+}
+
+/* Intro */
+.intro-text {
+  color: var(--dark-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.6rem;
+  padding-right: 70px;
+  text-align: center;
+}
+
+.intro-text h1, .intro-text p {
+  margin: 1rem 0;
+}
+
+.intro-btn {
+  margin-top: 1.5rem;
+}
+
+.intro-btn a {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  transition: 0.3s ease-in;
+}
+
+.intro-btn a:hover {
+  background-color: var(--darker-color);
+  color: var(--main-color);
+}
+
+/* Home */
+#home {
+  background-color: var(--dark-color);
+}
+
+.home-text {
+  color: var(--light-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.6rem;
+  padding-left: 70px;
+  text-align: center;
+}
+
+.home-text h1, .home-text p {
+  margin: 1rem 0;
+}
+
+.home-btn {
+  background-color: var(--light-color);
+  color: var(--darker-color);
+  transition: 0.3s ease-in;
+}
+
+.home-btn:hover {
+  background-color: var(--main-color);
+}
+
+/* Features */
+#features {
+  display: flex;
+  align-items: center;
+  height: 30vh;
+}
+
+.feature-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2rem;
+  height: 100%;
+  width: 33.3%;
+}
+
+.bg-main {
+  background-color: var(--main-color);
+}
+
+/* Footer */
+footer {
+  background-color: var(--darker-color);
+}
+
+footer p {
+  color: var(--light-color);
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* About Page */
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.about-text {
+  padding-right: 70px;
+  text-align: center;
+}
+
+.about-text p {
+  line-height: 1.6rem;
+  margin-top: 2rem;
+}
+
+/* Contact Page */
+#contact-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.contact-container {
+  width: 80%;
+}
+
+#contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+#contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px var(--dark-color) solid;
+}
+
+#contact-form textarea {
+  height: 200px;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border-color: var(--main-color);
+}
+
+.contact-container h1, .contact-container p {
+  margin: 1rem 0;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 1000px) {
+  .img {
+    display: none;
+  }
+
+  .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Navigation */
+  nav .logo {
+    text-align: center;
+  }
+
+  nav ul {
+    margin-bottom: 2rem;
+  }
+
+  nav ul li a {
+    padding: 1rem 2rem;
+  }
+
+  .intro-text, .home-text {
+    padding: 2rem 0;
+  }
+
+  #intro, #home, #features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+  }
+
+  /* Features */
+  #features {
+    flex-direction: column;
+  }
+
+  .feature-box {
+    width: 100%;
+  }
+}
